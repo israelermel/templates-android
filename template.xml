@@ -1,0 +1,39 @@
+<template format="4"
+        revision="1"
+        name="Gera classes Inicio"
+        description="Cria classes">
+
+    <category value="Other"/>
+
+    <parameter id="className"
+        name="Functionality Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Classes"
+        help="The name of the functionality that requires MVP views"/>
+
+   <parameter
+            id="layoutName"
+            name="Layout Name"
+            type="string"
+            constraints="layout|unique|nonempty"
+            suggest="${activityToLayout(className)}"
+            default="activity_main"
+            help="The name of the layout to create for the activity"/>
+
+    <!-- <parameter id="tipoRequisicao"
+        name="Tipo operacao"
+        type="enum"
+        constraints="nonempty"
+        default="get"
+        >
+
+        <option id="get">GET</option>
+        <option id="post">POST</option>
+        
+    </parameter> -->
+    
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
