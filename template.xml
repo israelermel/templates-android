@@ -21,18 +21,94 @@
             default="activity_main"
             help="The name of the layout to create for the activity"/>
 
-    <!-- <parameter id="tipoRequisicao"
-        name="Tipo operacao"
+    <!-- Campo 1 -->
+    <parameter id="descCampo1"
+        name="Descricao do campo 1"
+        type="string"
+        constraints=""
+        default=""
+        help="Descricao do campo 1"/>
+
+    <parameter
+        id="nomeCampo1"
+        name="Nome do atrbuto do campo 1"
+        type="string"
+        constraints=""
+        suggest="c${descCampo1}"
+        default=""
+        help="Nome do atrbuto do campo 1"/>
+
+    <parameter id="tipoTeclado1"
+        name="Tipo de teclado do field"
+        type="enum"
+        constraints=""
+        default="tipoString">
+
+        <option id="tipoString">String</option>
+        <option id="tipoInteiro">Inteiro</option>
+        <option id="tipoData">Data</option>
+        
+    </parameter>
+
+    <!-- Campo 2 -->
+     <parameter id="descCampo2"
+        name="Descricao do campo 2"
+        type="string"
+        constraints=""
+        default=""
+        help="Descricao do campo 2"/>
+
+    <parameter
+        id="nomeCampo2"
+        name="Nome do atrbuto do campo 2"
+        type="string"
+        constraints=""
+        suggest="c${descCampo2}"
+        default=""
+        help="Nome do atrbuto do campo 2"/>
+
+    <parameter id="tipoTeclado2"
+        name="Tipo de teclado do field"
         type="enum"
         constraints="nonempty"
-        default="get"
-        >
+        default="tipoString">
 
-        <option id="get">GET</option>
-        <option id="post">POST</option>
+        <option id="tipoString">String</option>
+        <option id="tipoInteiro">Inteiro</option>
+        <option id="tipoData">Data</option>
         
-    </parameter> -->
+    </parameter>
     
+     <!-- Campo 3 -->
+    <parameter id="descCampo3"
+        name="Descricao do campo 3"
+        type="string"
+        constraints=""
+        default=""
+        help="Descricao do campo 3"/>
+
+    <parameter
+        id="nomeCampo3"
+        name="Nome do atrbuto do campo 3"
+        type="string"
+        constraints=""
+        suggest="c${descCampo3}"
+        default=""
+        help="Nome do atrbuto do campo 3"/>
+
+    <parameter id="tipoTeclado3"
+        name="Tipo de teclado do field"
+        type="enum"
+        constraints=""
+        default="tipoString">
+
+        <option id="tipoString">String</option>
+        <option id="tipoInteiro">Inteiro</option>
+        <option id="tipoData">Data</option>
+        
+    </parameter>
+
+    <!-- templates -->
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 
